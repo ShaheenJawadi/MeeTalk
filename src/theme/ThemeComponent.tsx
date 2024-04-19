@@ -1,6 +1,7 @@
 import React from 'react';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
+import { CssBaseline } from '@mui/material'; 
 interface Props {
     children: React.ReactNode;
 
@@ -21,6 +22,7 @@ const ThemeComponent= (props:Props) => {
 
     return (
         <ThemeProvider theme={theme}>
+            <CssBaseline/>
             {children}
         </ThemeProvider>
     );
