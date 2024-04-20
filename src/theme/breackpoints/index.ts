@@ -1,5 +1,6 @@
  
- const breakpoints =()=>({
+
+const Breakpoints = {
     values: {
         xs: 0,
         sm: 600,
@@ -7,7 +8,8 @@
         lg: 1200,
         xl: 1500,
     },
- })
- 
+};
 
-export default breakpoints;
+export default Breakpoints;
+ 
+ 

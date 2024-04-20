@@ -1,7 +1,11 @@
+"use client";
 import React from 'react';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-
-import { CssBaseline } from '@mui/material'; 
+import {deepmerge} from '@mui/utils';
+import { CssBaseline, Theme, responsiveFontSizes } from '@mui/material'; 
+import Breakpoints from './breackpoints';
+import Palette from './palette';
+import Typography from './typography';
 interface Props {
     children: React.ReactNode;
 
@@ -9,16 +13,25 @@ interface Props {
 
 const ThemeComponent= (props:Props) => {
     const { children } = props;
-    const theme = createTheme({ 
-        palette: {
-            primary: {
-                main: '#000',
-            },
-            secondary: {
-                main: '#fff',
-            },
+    let theme = createTheme({ 
+        palette: Palette(),
+        typography: {
+            fontFamily: 'Arial, sans-serif',
         },
+        shape: {
+            borderRadius: 8,
+        },
+        breakpoints: Breakpoints,
+        
     });
+
+    const mergeTypography =(theme :Theme) => deepmerge(Typography(theme), theme.typography) ;
+
+
+    theme = createTheme(theme, {
+        typography: mergeTypography(theme),
+    });
+    theme= responsiveFontSizes(theme);
 
     return (
         <ThemeProvider theme={theme}>
