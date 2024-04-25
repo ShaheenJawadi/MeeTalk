@@ -35,7 +35,7 @@ const Palette = () => {
         },
         text: {
             primary: '#000',
-            secondary: '#fff',
+            secondary: '#37486a',
             disabled: '#ccc',
             hint: '#ccc',
         },
