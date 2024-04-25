@@ -273,6 +273,19 @@
   resolved "https://registry.yarnpkg.com/@mui/core-downloads-tracker/-/core-downloads-tracker-5.15.15.tgz#2bc2bda50db66c12f10aefec907c48c8f669ef59"
   integrity sha512-aXnw29OWQ6I5A47iuWEI6qSSUfH6G/aCsW9KmW3LiFqr7uXZBK4Ks+z8G+qeIub8k0T5CMqlT2q0L+ZJTMrqpg==
 
+"@mui/lab@^5.0.0-alpha.170":
+  version "5.0.0-alpha.170"
+  resolved "https://registry.yarnpkg.com/@mui/lab/-/lab-5.0.0-alpha.170.tgz#4519dfc8d1c51ca54fb9d8b91b95a3733d07be16"
+  integrity sha512-0bDVECGmrNjd3+bLdcLiwYZ0O4HP5j5WSQm5DV6iA/Z9kr8O6AnvZ1bv9ImQbbX7Gj3pX4o43EKwCutj3EQxQg==
+  dependencies:
+    "@babel/runtime" "^7.23.9"
+    "@mui/base" "5.0.0-beta.40"
+    "@mui/system" "^5.15.15"
+    "@mui/types" "^7.2.14"
+    "@mui/utils" "^5.15.14"
+    clsx "^2.1.0"
+    prop-types "^15.8.1"
+
 "@mui/material-nextjs@^5.15.11":
   version "5.15.11"
   resolved "https://registry.yarnpkg.com/@mui/material-nextjs/-/material-nextjs-5.15.11.tgz#bf75eece88fb088e74eb5f0eef01f9f64f8ec7f4"
