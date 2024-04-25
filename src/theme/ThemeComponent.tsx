@@ -2,7 +2,7 @@
 import React from 'react';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import {deepmerge} from '@mui/utils';
-import { CssBaseline, Theme, responsiveFontSizes } from '@mui/material'; 
+import { CssBaseline, GlobalStyles, Theme, responsiveFontSizes } from '@mui/material'; 
 import Breakpoints from './breackpoints';
 import Palette from './palette';
 import Typography from './typography';
@@ -21,6 +21,7 @@ const ThemeComponent= (props:Props) => {
         shape: {
             borderRadius: 8,
         },
+        spacing: (factor: number) => `${0.3 * factor}rem`,
         breakpoints: Breakpoints,
         
     });
@@ -35,7 +36,7 @@ const ThemeComponent= (props:Props) => {
 
     return (
         <ThemeProvider theme={theme}>
-            <CssBaseline/>
+            <CssBaseline/> 
             {children}
         </ThemeProvider>
     );
