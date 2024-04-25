@@ -42,16 +42,16 @@ export default function Home() {
 
 
   return (
-    <Box  className={styles.fullHeight}>
- 
-      <Grid   container padding={15}  className={styles.fullHeight}>
-        <Grid  item md={3}>
-          <Paper  elevation={5}  >
+    <Box className={styles.fullHeight}>
+
+      <Grid container className={styles.fullHeight}>
+        <Grid item md={3}>
+          <Stack  padding={5}  >
             <Stack direction={"row"}   >
 
               <Avatar alt="Shaheen jawadi" />
 
-              <Stack spacing={15}>
+              <Stack  >
                 <Typography variant="h6">Shaheen Jawadi</Typography>
                 <Typography variant="caption">@Shaheenj</Typography>
               </Stack>
@@ -59,8 +59,8 @@ export default function Home() {
 
 
             </Stack>
-
-          </Paper>
+            <Typography variant="h4">Chats</Typography>
+          </Stack>
         </Grid>
         <Grid item md={9}>
           qsdqs

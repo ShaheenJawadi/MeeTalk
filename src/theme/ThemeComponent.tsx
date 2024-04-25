@@ -17,6 +17,7 @@ const ThemeComponent= (props:Props) => {
         palette: Palette(),
         typography: {
             fontFamily: 'Arial, sans-serif',
+            fontSize:14,
         },
         shape: {
             borderRadius: 8,
