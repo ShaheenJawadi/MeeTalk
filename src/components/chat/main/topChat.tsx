@@ -1,27 +1,33 @@
-import { Stack, Box, Avatar, Typography } from '@mui/material';
+import { Stack, Box, Avatar, Typography, IconButton } from '@mui/material';
 import React from 'react';
-
+import { PhoneOutline, VideoOutline } from 'mdi-material-ui';
 const TopChat = () => {
 
     return (
-        <Stack padding={2} direction={"row"} alignItems={"center"} justifyContent={"space-between"}>
+        <Stack paddingY={2} paddingX={5}  direction={"row"} alignItems={"center"} justifyContent={"space-between"}>
             <Box>
                 <Stack direction={"row"} alignItems={"center"} spacing={2}  >
 
-                    <Avatar alt="Shaheen jawadi" />
+                    <Avatar  alt="Shaheen jawadi" />
 
                     <Stack  >
-                        <Typography variant="body1">Shaheen Jawadi</Typography>
-                        <Typography variant="subtitle2">@Shaheenj</Typography>
+                        <Typography variant="body1" color={"success"}>Shaheen Jawadi</Typography>
+                        <Typography variant="subtitle2" sx={{color:"success.main"}}  >active</Typography>
                     </Stack>
 
 
 
                 </Stack>
             </Box>
-            <Box>
-                Call
-            </Box>
+            <Stack direction={"row"} spacing={2}>
+                <IconButton    >
+                    <PhoneOutline sx={{ fontSize: 22, color: "primary.main" }} />
+                </IconButton >
+                <IconButton    >
+                    <VideoOutline sx={{ fontSize: 22, color: "primary.main" }} />
+                </IconButton > 
+
+            </Stack>
         </Stack>
     );
 };
