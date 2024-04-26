@@ -6,11 +6,12 @@ import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import { Avatar, Box, Divider, Stack, Typography } from "@mui/material";
 import { Message, StarFourPoints, AccountBox, Phone, CogOutline } from 'mdi-material-ui';
+import MessagesList from './leftSide/messagesList';
 
 const LeftSide = () => {
 
     return (
-        <Stack   >
+        <Stack  sx={{ height:"100%" }}   >
             <Stack padding={5}  direction={"row"} justifyContent={"space-between"} alignItems={"center"} >
                 <Stack direction={"row"} spacing={2} alignItems={"center"}>
 
@@ -35,10 +36,10 @@ const LeftSide = () => {
                         <Tab sx={{ p: 0 }} icon={<Phone />} value="4" />
                     </TabList>
                 </Box>
-                <TabPanel value="1">Messages</TabPanel>
-                <TabPanel value="2">Fav</TabPanel>
-                <TabPanel value="3">contacts</TabPanel>
-                <TabPanel value="4"> calls</TabPanel>
+                <TabPanel sx={{ height: "100%",p: 0 }} value="1"><MessagesList/></TabPanel>
+                <TabPanel sx={{ height: "100%" ,p: 0}} value="2">Fav</TabPanel>
+                <TabPanel sx={{ height: "100%" ,p: 0}}  value="3">contacts</TabPanel>
+                <TabPanel sx={{ height: "100%" ,p: 0}} value="4"> calls</TabPanel>
             </TabContext>
 
 
