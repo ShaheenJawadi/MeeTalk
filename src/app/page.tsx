@@ -5,6 +5,7 @@ import * as  io from "socket.io-client";
 import { Box,  Grid } from "@mui/material";
 import React from "react";
 import LeftSide from "@/components/chat/leftSide";
+import MainChat from "@/components/chat/mainChat";
 const socket = io.connect("http://localhost:3500");
 export default function Home() {
 
@@ -50,7 +51,7 @@ export default function Home() {
          <LeftSide/>
         </Grid>
         <Grid item md={9}>
-          qsdqs
+          <MainChat/>
         </Grid>
       </Grid>
 
