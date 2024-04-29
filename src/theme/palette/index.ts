@@ -44,7 +44,7 @@ const Palette = () => {
             paper: '#f2f2f2',
             
         },
-        divider: '#ccc',
+        divider: '#2f224b1a',
         action: {
             active: '#000',
             hover: '#ccc',
