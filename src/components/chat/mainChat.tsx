@@ -9,7 +9,7 @@ const MainChat = () => {
     return (
         <Stack height="100vh">
             <TopChat />
-            <Box flex={1}>
+            <Box flex={1} sx={{ overflowY:"auto" }}>
                 <Conversation />
             </Box>
             <ChatInput />
