@@ -4,7 +4,8 @@ import { PhoneOutline, VideoOutline } from 'mdi-material-ui';
 const TopChat = () => {
 
     return (
-        <Stack paddingY={2} paddingX={5}  direction={"row"} alignItems={"center"} justifyContent={"space-between"}>
+                    
+        <Stack paddingY={2} paddingX={5}  direction={"row"} alignItems={"center"} justifyContent={"space-between"} sx={{ borderBottom:1 , borderColor:"divider" }}>
             <Box>
                 <Stack direction={"row"} alignItems={"center"} spacing={2}  >
 

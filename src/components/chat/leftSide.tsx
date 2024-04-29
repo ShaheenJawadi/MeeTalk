@@ -11,7 +11,7 @@ import MessagesList from './leftSide/messagesList';
 const LeftSide = () => {
 
     return (
-        <Stack  sx={{ height:"100%" }}   >
+        <Stack sx={{ height: "100%", borderRight: 1, borderColor: "divider" }}   >
             <Stack padding={5}  direction={"row"} justifyContent={"space-between"} alignItems={"center"} >
                 <Stack direction={"row"} spacing={2} alignItems={"center"}>
 

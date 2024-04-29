@@ -6,7 +6,7 @@ import React from 'react';
 const ChatInput = () => {
 
     return (
-        <Stack direction={"row"} spacing={4} alignItems={"end"} padding={3} >
+        <Stack sx={{ borderTop: 1, borderColor: "divider" }} direction={"row"} spacing={4} alignItems={"end"} padding={3} >
            
             <Box><FileImage sx={{ fontSize: 22, color: "primary.main" }} /></Box>
             <Box><Paperclip sx={{ fontSize: 22, color: "primary.main" }} /></Box>
