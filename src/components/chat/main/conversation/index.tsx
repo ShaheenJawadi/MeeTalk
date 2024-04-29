@@ -7,10 +7,16 @@ const Conversation = () => {
     return (
         <Box padding={5} sx={{ height: "100%", backgroundColor: 'background.paper' }} >
             <Stack spacing={2} direction={"column"} >
-                <UserChat />
-                <UserChat />
+                <UserChat pos={"right"} />
+                <UserChat pos='' />
 
-
+                <UserChat pos={"right"} />
+                <UserChat pos='' />
+                 <UserChat pos='' />
+                <UserChat pos={"right"} />
+                <UserChat pos='' />
+                <UserChat pos={"right"} />
+                <UserChat pos={"right"} />
             </Stack>
         </Box>
     );

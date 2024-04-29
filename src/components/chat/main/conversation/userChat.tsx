@@ -1,31 +1,44 @@
-import { Avatar, Stack, Box, Paper, Typography ,Card, CardProps, styled } from '@mui/material';
+import { Avatar, Stack, Box, Paper, Typography, Card, StackProps, styled } from '@mui/material';
 import React from 'react';
 import { ClockTimeFiveOutline } from 'mdi-material-ui';
 
-const MessageBox = styled(Card)<CardProps>(({ theme }) => ({
-    padding: theme.spacing(2),
+const MessageElement = styled(Stack)<StackProps>(({ theme }) => ({
     '&.right': {
-        backgroundColor: theme.palette.primary.main,
-       
-        '& .MuiTypography-root': { color:theme.palette.common.white,},
 
-        
+
+        flexDirection: 'row-reverse',
+        alignSelf: 'flex-end',
+
+        '& .avatarBox': {
+            display: "none",
+        },
+        '& .MuiCard-root': {
+            backgroundColor: theme.palette.primary.main,
+
+            '& .MuiTypography-root': { color: theme.palette.common.white, },
+
+
+        }
     }
 }))
+interface Props {
+    pos:string
+}
 
-const UserChat = () => {
+const UserChat = (props :Props) => {
 
+    const {pos} = props;
     return (
-        <Stack direction={"row"} spacing={2}  >
-            <Box>
+        <MessageElement className={pos} direction={"row"} spacing={2}  >
+            <Box className={"avatarBox"}>
                 <Avatar sizes='small' alt="Shaheen jawadi" />
 
             </Box>
 
             <Stack direction={"column"} spacing={1} >
-                <MessageBox  className='right' >
+                <Card sx={{ padding: 2 }}  >
                     <Typography variant='body1'>gyhfghfgh</Typography>
-                </MessageBox>
+                </Card>
                 <Stack direction={"row"} alignItems={"center"} spacing={0.5} >
                     <ClockTimeFiveOutline sx={{ fontSize: 14 }} />
                     <Typography variant="caption">2 days ago</Typography>
@@ -35,7 +48,7 @@ const UserChat = () => {
             </Stack>
 
 
-        </Stack>
+        </MessageElement>
     );
 };
 
