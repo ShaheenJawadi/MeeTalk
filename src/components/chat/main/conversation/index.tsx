@@ -8,6 +8,8 @@ const Conversation = () => {
         <Box padding={5} sx={{ height: "100%", backgroundColor: 'background.paper' }} >
             <Stack spacing={2} direction={"column"} >
                 <UserChat />
+                <UserChat />
+
 
             </Stack>
         </Box>
