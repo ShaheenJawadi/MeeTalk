@@ -2,7 +2,7 @@
 import { configureStore } from '@reduxjs/toolkit'
 
  
-import socket from './socket'
+import socket from '@/store/socket'
  
 
 export const store = configureStore({
