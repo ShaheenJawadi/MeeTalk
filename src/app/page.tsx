@@ -6,9 +6,11 @@ import { Box,  Grid } from "@mui/material";
 import React from "react";
 import LeftSide from "@/components/chat/leftSide";
 import MainChat from "@/components/chat/mainChat";
-const socket = io.connect("http://localhost:3500");
+import initIO from "@/socket/init";
+
 export default function Home() {
 
+  initIO();
 
   //   const [message, setMessage] = useState(""); 
   //   const [recivedMessages, setRecivedMessages] = useState<string[]>([]);
