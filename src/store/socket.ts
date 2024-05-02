@@ -6,7 +6,7 @@ export const appSocketSlice = createSlice({
     initialState: {io:null},
     reducers: {
         connect: (state,action) => {
-            state.io = action.payload
+            state.io = action.payload;
         }
     }
 })

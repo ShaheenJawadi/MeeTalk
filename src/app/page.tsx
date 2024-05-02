@@ -1,16 +1,18 @@
 "use client";
 import styles from "./page.module.css";
-import * as  io from "socket.io-client";
-
+ 
 import { Box,  Grid } from "@mui/material";
 import React from "react";
 import LeftSide from "@/components/chat/leftSide";
 import MainChat from "@/components/chat/mainChat";
 import initIO from "@/socket/init";
+import { useDispatch } from 'react-redux'
+import { AppDispatch } from "@/store";
 
 export default function Home() {
-
-  initIO();
+ 
+  const dispatch = useDispatch<AppDispatch>()
+  dispatch(initIO());
 
   //   const [message, setMessage] = useState(""); 
   //   const [recivedMessages, setRecivedMessages] = useState<string[]>([]);
